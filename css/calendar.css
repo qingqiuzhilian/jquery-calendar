@@ -1,0 +1,223 @@
+html {overflow-x: hidden;overflow-y: auto;}
+BODY {background-color: #ccdbf0;}
+
+
+.topDateFont{font-size:14px; color:#000000;}
+.calTit SPAN{margin-top:2px; font-weight:bold; display:inline-block;}
+
+/*calendar*/
+.calTit{
+	background-image:url(../images/calTit.jpg);
+}
+.calWeekTit{
+	background-color:#99BBE8; color:#15428B;
+}
+.calWeekTit td.td_week{
+	min-width: 30px;
+}
+.calWeekTit td.td_weekend{
+	min-width: 30px;
+	color: red;
+}
+
+table.biao {
+    border-collapse: collapse;
+    font-family: "Arial","Times New Roman", "宋体";
+}
+table.biao td {
+	border: 1px solid #99BBE8;
+}
+/*上下年月导航按钮*/
+.lsArrow{
+	background-image:url(../images/tool-sprites.gif); background-position:0px 180px;
+}
+.lsArrow:hover{
+	background-image:url(../images/tool-sprites.gif); background-position:15px 180px;
+}
+.lArrow{
+	background-image:url(../images/tool-sprites.gif); background-position:0px 255px;
+}
+.lArrow:hover{
+	background-image:url(../images/tool-sprites.gif); background-position:15px 255px;
+}
+.rsArrow{
+	background-image:url(../images/tool-sprites.gif); background-position:0px 195px;
+}
+.rsArrow:hover{
+	background-image:url(../images/tool-sprites.gif); background-position:15px 195px;
+}
+.rArrow{
+	background-image:url(../images/tool-sprites.gif); background-position:0px 240px;
+}
+.rArrow:hover{
+	background-image:url(../images/tool-sprites.gif); background-position:15px 240px;
+}
+.ymNaviBtn{
+	height:15px; 
+	width:15px; 
+	margin-left:3px; 
+	margin-right:3px; 
+	overflow:hidden; 
+	display:inline-block;
+	vertical-align: middle;
+}
+
+/* 今天 */
+.calTit SPAN.today{
+	font-size:12px;
+	border-radius:3px;
+	font-weight:normal;
+	display:inline-block;
+	cursor:pointer;
+	border: 1px solid #bfbfbf;
+}
+.calTit SPAN.today:hover{
+	color: red;
+	border: 1px solid red;
+}
+
+/*休息日*/
+.holiday{
+	position: absolute;
+	background: url(../images/workdayType.png) no-repeat 0 0;
+	width: 100%;
+	height: 15px;
+}
+/*上班日*/
+.workday{
+	position: absolute;
+	background: url(../images/workdayType.png) no-repeat 0 -15px;
+	width: 100%;
+	height: 15px;
+}
+/*请假*/
+.offwork{
+	position: absolute;
+	background: url(../images/workdayType.png) no-repeat 0 -30px;
+	width: 100%;
+	height: 15px;
+	margin: 15px 0;
+}
+/*调休*/
+.takeoff{
+	position: absolute;
+	background: url(../images/workdayType.png) no-repeat 0 -60px;
+	width: 100%;
+	height: 15px;
+	margin: 15px 0;
+}
+/*加班*/
+.overtime{
+	position: absolute;
+	background: url(../images/workdayType.png) no-repeat 0 -45px;
+	width: 100%;
+	height: 15px;
+	margin: 15px 0;
+}
+/*出差*/
+.businesstrip{
+	position: absolute;
+	background: url(../images/workdayType.png) no-repeat 0 -75px;
+	width: 100%;
+	height: 15px;
+	margin: 30px 0;
+}
+.unover {
+    background: #ffffff;
+    cursor: auto;
+    filter: opacity(0.7);
+    opacity: 0.7;
+}
+.jinri{
+	background: #ffff006b;
+}
+.selday {
+	background: #e2992e;
+}
+.calendar_solar_daynumber,.calendar_lunar_day{
+	font-size: 22px;
+	font-family: "Arial";
+}
+.calendar_lunar_day{
+	font-size: 14px;
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+	width: 30px;
+	display: inline-block;
+}
+
+/* 年月选择面板 */
+.sel_Y_date {
+	min-width: 70px;
+	position: absolute;
+	border: 1px solid #f8c173;
+	display: none;
+	height: 150px;
+	overflow: auto scroll;
+	outline: none;
+}
+
+.sel_Y_date ul {
+	list-style-type: none;
+	min-width: 50px;
+	margin: 0;
+	padding: 1px;
+	background: #fefef1;
+}
+
+.sel_Y_date ul li {
+	min-width: 50px;
+	line-height: 20px;
+	color: green;
+	margin: 0;
+	padding: 1px 0 1px 0;
+}
+
+.sel_Y_date ul li:hover, .sel_Y_date ul li.sel_year_hover {
+	border-top: 1px solid yellow;
+	border-bottom: 1px solid yellow;
+	cursor: pointer;
+	background: #f1fafe;
+	font-weight: 800;
+	color: red;
+}
+
+.sel_Y_date ul li:active {
+	background: #fefef1;
+}
+.sel_M_date {
+	min-width: 50px;
+	position: absolute;
+	border: 1px solid #f8c173;
+	display: none;
+	height: auto;
+	outline: none;
+	padding: 1px 0 1px 0;
+}
+.sel_M_date ul {
+	list-style-type: none;
+	min-width: 50px;
+	margin: 0;
+	padding: 1px;
+	background: #fefef1;
+}
+.sel_M_date ul li {
+	min-width: 50px;
+	line-height: 20px;
+	color: green;
+	margin: 0;
+	padding: 1px 0 1px 0;
+}
+.sel_M_date ul li:hover, .sel_M_date ul li.sel_month_hover {
+	border-top: 1px solid yellow;
+	border-bottom: 1px solid yellow;
+	cursor: pointer;
+	background: #f1fafe;
+	font-weight: 800;
+	color: red;
+}
+
+.sel_M_date ul li:active {
+	background: #fefef1;
+}
